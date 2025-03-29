@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body{
+    background-color: #F4F8FF ;
+    font-family: "Roboto", serif;
+}
+nav {
+    position: absolute; 
+    top: 5%; 
+    left: 5%; 
+    z-index: 2; 
+    opacity: 0; 
+    animation: fadeIn 0.8s ease-in-out forwards; 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+nav ul {
+    display: flex; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 10%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.6vw;
+    font-weight: bold;
+    color: #000000; 
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Glow effect on hover */
+nav ul li a:hover {
+    text-shadow: 0 0 15px #639AD2, 0 0 25px #639AD2;
+}
+
+.nav-item {
+    position: relative;
+    padding-left: 14px; /* Space for vertical line */
+}
+
+.nav-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -100%; /* Start hidden below */
+    width: 4px;
+    height: 100%;
+    background-color: #639AD2;
+    opacity: 0; /* Initially hidden */
+    transition: bottom 0.3s ease-in-out, opacity 0.3s;
+}
+
+/* Move the line up and show it on hover */
+.nav-item.hovered::before,
+.nav-item.active::before { /* Keep it visible for the active page */
+    bottom: 0;
+    opacity: 1;
+}
+.logo{
+    width: 8%;
+    height: auto;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+.user{
+    width: 4vw;
+    position: absolute;
+    right: 10%;
+    top: 3%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+h1{
+    margin-left: 10%;
+    margin-top: 2%;
+}
+@media (min-width: 1440px) {
+    h1{
+        font-size: 3em;
+    }
+}
+.michealcarter {
+    width: 40%;
+    margin-left: 5%;
+    margin-top: 5%;
+    border: 1px solid #639AD2;
+    border-radius: 20px;
+    padding: 2%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative; /* Ensure child elements can use relative positioning */
+    cursor: pointer; /* Add pointer cursor */
+}
+
+/* Hover effect to slightly lift the section */
+.michealcarter:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(99, 154, 210, 0.6),  
+                0 0 40px rgba(99, 154, 210, 0.5),  
+                0 0 60px rgba(99, 154, 210, 0.4);
+}
+
+.michealcarter img {
+    width: 6vw;
+    height: 5.5vw;
+    border-radius: 10px;
+    display: block;
+    float: left; 
+    margin-right: 10px;
+}
+
+
+.michealcarter h2{
+    margin-left: 20%;
+}
+.michealcarter p {
+    margin-left: 20%;
+    margin-top: 5%;
+    line-height: 130%;
+}
+
+.michealcarter .oval {
+    border: 2px black solid;
+    width: 20%;
+    margin-top: 3%;
+    border-radius: 30px;
+    padding: 7px;
+    margin-left: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transform: translateX(-80px); 
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+
+.michealcarter .oval img {
+    width: 2vw;
+    height: auto;
+}
+
+/* Slide in the entire rating section on hover */
+.michealcarter:hover .oval {
+    transform: translateX(0);
+    opacity: 1;
+}
+.samanthareynolds {
+    width: 40%;
+    margin-left: 55%; /* Shift it more to the right */
+    margin-top: -17%;
+    border: 1px solid #639AD2;
+    border-radius: 20px;
+    padding: 2%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative; /* Ensure child elements can use relative positioning */
+    cursor: pointer; /* Add pointer cursor */
+}
+@media (min-width: 1440px) {
+    .samanthareynolds{
+        margin-top: -15.9%;
+        height: 33vh;
+    }
+}
+/* Hover effect to slightly lift the section */
+.samanthareynolds:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(99, 154, 210, 0.6),  
+                0 0 40px rgba(99, 154, 210, 0.5),  
+                0 0 60px rgba(99, 154, 210, 0.4);
+}
+@media (min-width: 1440px) {
+    .samanthareynolds h2, .michealcarter h2, .jessicalopez h2, .davidmitchell h2, .feliciagomez h2, .kennyjohnson h2, .harrythompson h2{
+        font-size: 1.9em;
+    }
+}
+@media (min-width: 1440px) {
+    .samanthareynolds p, .michealcarter p, .jessicalopez p, .davidmitchell p, .feliciagomez p, .kennyjohnson p, .harrythompson p {
+        font-size: 1.2em;
+    }
+}
+@media (min-width: 1440px) {
+    .michealcarter .oval, 
+    .ashwilliams .oval, 
+    .davidmitchell .oval, 
+    .jessicalopez .oval, 
+    .feliciagomez .oval, 
+    .kennyjohnson .oval, 
+    .harrythompson .oval,
+    .samanthareynolds .oval {
+        font-size: 1.5em;
+    }
+}
+
+
+.samanthareynolds img {
+    width: 6vw;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    float: left; 
+    margin-right: 10px;
+}
+
+.samanthareynolds h2 {
+    margin-left: 20%;
+}
+
+.samanthareynolds p {
+    margin-left: 20%;
+    margin-top: 5%;
+    line-height: 130%;
+}
+
+.samanthareynolds .oval {
+    border: 2px black solid;
+    width: 20%;
+    margin-top: 3%;
+    border-radius: 30px;
+    padding: 7px;
+    margin-left: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transform: translateX(80px); /* Move it to the right initially */
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Slide in the entire rating section from the right on hover */
+.samanthareynolds:hover .oval {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.samanthareynolds .oval img {
+    width: 2vw;
+    height: auto;
+}
+.davidmitchell {
+    width: 40%;
+    margin-left: 5%; /* Align to the left like Micheal */
+    margin-top: 5%; /* Add space below Micheal */
+    border: 1px solid #639AD2;
+    border-radius: 20px;
+    padding: 2%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative; /* Ensure child elements can use relative positioning */
+    cursor: pointer; /* Add pointer cursor */
+}
+
+/* Hover effect to slightly lift the section */
+.davidmitchell:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(99, 154, 210, 0.6),  
+                0 0 40px rgba(99, 154, 210, 0.5),  
+                0 0 60px rgba(99, 154, 210, 0.4);
+}
+
+.davidmitchell img {
+    width: 6vw;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    float: left; 
+    margin-right: 10px;
+}
+
+.davidmitchell h2 {
+    margin-left: 20%;
+}
+
+.davidmitchell p {
+    margin-left: 20%;
+    margin-top: 5%;
+    line-height: 130%;
+}
+
+.davidmitchell .oval {
+    border: 2px black solid;
+    width: 20%;
+    margin-top: 3%;
+    border-radius: 30px;
+    padding: 7px;
+    margin-left: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transform: translateX(-80px); /* Move it to the left initially */
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.davidmitchell .oval img {
+    width: 2vw;
+    height: auto;
+}
+
+/* Slide in the entire rating section from the left on hover */
+.davidmitchell:hover .oval {
+    transform: translateX(0);
+    opacity: 1;
+}
+.jessicalopez {
+    width: 40%;
+    margin-left: 55%; /* Align it with samanthareynolds */
+    margin-top: -17%; /* Same as davidmitchell */
+    border: 1px solid #639AD2;
+    border-radius: 20px;
+    padding: 2%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative; /* Ensure child elements can use relative positioning */
+    cursor: pointer; /* Add pointer cursor */
+}
+@media (min-width: 1440px) {
+    .jessicalopez{
+        margin-top: -16.1%;
+    }
+}
+/*
+/* Hover effect to slightly lift the section */
+.jessicalopez:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(99, 154, 210, 0.6),  
+                0 0 40px rgba(99, 154, 210, 0.5),  
+                0 0 60px rgba(99, 154, 210, 0.4);
+}
+
+.jessicalopez img {
+    width: 6vw;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    float: left; 
+    margin-right: 10px;
+}
+
+.jessicalopez h2 {
+    margin-left: 20%;
+}
+
+.jessicalopez p {
+    margin-left: 20%;
+    margin-top: 5%;
+    line-height: 130%;
+}
+
+.jessicalopez .oval {
+    border: 2px black solid;
+    width: 20%;
+    margin-top: 3%;
+    border-radius: 30px;
+    padding: 7px;
+    margin-left: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transform: translateX(80px); /* Move it to the right initially */
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.jessicalopez .oval img {
+    width: 2vw;
+    height: auto;
+}
+
+/* Slide in the entire rating section from the right on hover */
+.jessicalopez:hover .oval {
+    transform: translateX(0);
+    opacity: 1;
+}
+/* ---------- Left Side Testimonials ---------- */
+.feliciagomez,
+.kennyjohnson {
+    width: 40%;
+    margin-left: 5%; /* Left side alignment */
+    margin-top: 5%;  /* Vertical spacing */
+    border: 1px solid #639AD2;
+    border-radius: 20px;
+    padding: 2%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+
+.feliciagomez:hover,
+.kennyjohnson:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(99,154,210,0.6),
+                0 0 40px rgba(99,154,210,0.5),
+                0 0 60px rgba(99,154,210,0.4);
+}
+
+.feliciagomez img,
+.kennyjohnson img {
+    width: 6vw;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+
+.feliciagomez h2,
+.kennyjohnson h2 {
+    margin-left: 20%;
+}
+
+.feliciagomez p,
+.kennyjohnson p {
+    margin-left: 20%;
+    margin-top: 5%;
+    line-height: 130%;
+}
+
+/* Oval slides in from the left */
+.feliciagomez .oval,
+.kennyjohnson .oval {
+    border: 2px black solid;
+    width: 20%;
+    margin-top: 3%;
+    border-radius: 30px;
+    padding: 7px;
+    margin-left: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transform: translateX(-80px);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.feliciagomez:hover .oval,
+.kennyjohnson:hover .oval {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.feliciagomez .oval img,
+.kennyjohnson .oval img {
+    width: 2vw;
+    height: auto;
+}
+
+/* ---------- Right Side Testimonials ---------- */
+.ashwilliams {
+    width: 40%;
+    margin-left: 55%;  /* Right side alignment */
+    margin-top: -36.5%;  /* Moves Ashley higher */
+    border: 1px solid #639AD2;
+    border-radius: 20px;
+    padding: 2%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+@media (min-width: 1440px) {
+    .ashwilliams{
+       margin-top: -34.5%;
+        height: 30vh;
+    }
+}
+@media (min-width: 1440px) {
+    .ashwilliams p{
+       font-size: 1.1em;
+    }
+}
+.harrythompson {
+    width: 40%;
+    margin-left: 55%;  /* Right side alignment */
+    margin-top: 6%;   /* Increased to create a gap below Ashley */
+    border: 1px solid #639AD2;
+    border-radius: 20px;
+    padding: 2%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.ashwilliams:hover,
+.harrythompson:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(99,154,210,0.6),
+                0 0 40px rgba(99,154,210,0.5),
+                0 0 60px rgba(99,154,210,0.4);
+}
+
+.ashwilliams img {
+    width: 6vw;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    margin-top: -57%;
+}
+.harrythompson img {
+    width: 6vw;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+.ashwilliams h2,
+.harrythompson h2 {
+    margin-left: 20%;
+}
+
+.ashwilliams p,
+.harrythompson p {
+    margin-left: 20%;
+    margin-top: 5%;
+    line-height: 130%;
+}
+
+/* Oval slides in from the right */
+.ashwilliams .oval,
+.harrythompson .oval {
+    border: 2px black solid;
+    width: 20%;
+    margin-top: 3%;
+    border-radius: 30px;
+    padding: 7px;
+    margin-left: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transform: translateX(80px);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.ashwilliams:hover .oval,
+.harrythompson:hover .oval {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.ashwilliams .oval img{
+    width: 2vw;
+    height: auto;
+    margin-top: 0%;
+}
+.harrythompson .oval img {
+    width: 2vw;
+    height: auto;
+}
+
+footer{
+    margin-top: 7%;
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: bold;
+}

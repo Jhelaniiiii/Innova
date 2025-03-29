@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="services.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Images\Icons\customer-service.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | JetBlue Transport</title>
+</head>
+<body>
+    <img src="Images\Icons\newjetbluelogo.png" alt="JetBlue" class="jetblue-img">
+    <nav>
+        <ul class="nav">
+          <li class="nav-item"><a href="home.html">Home</a></li>
+          <li class="nav-item active"><a href="#">Services</a></li>
+          <li class="nav-item"><a href="on-site-appointment.html">Appointment</a></li>
+          <li class="nav-item"><a href="testimonials.html">Testimonials</a></li>
+        </ul>
+      </nav>
+
+      <script>
+     document.querySelectorAll(".nav-item").forEach(item => {
+    item.addEventListener("mouseenter", () => {
+        item.classList.add("hovered");
+    });
+
+    item.addEventListener("mouseleave", () => {
+        item.classList.remove("hovered");
+    });
+
+    item.addEventListener("click", () => {
+        // Remove active class from all items
+        document.querySelectorAll(".nav-item").forEach(nav => 
+            nav.classList.remove("active")
+        );
+        // Add active class to the clicked item
+        item.classList.add("active");
+    });
+});
+</script>
+<a href="customer-profile.html"><img src="Images\Icons\newuser.png" alt="user" class="user"></a>
+<h1>Book Your Appointment Today for Reliable & Affordable Transport Services</h1>
+
+<button class="bookappt-btn"> <a href="on-site-appointment.html">Book Appointment</a></button>
+
+<h1 class="services">Services</h1>
+<!-- <div class="professional-wrapping"> 
+    <img src="Images\Icons\whitebadge.png" alt="badge">
+    <h4>Professional Item Wrapping</h4>
+    <p>Secure and protective wrapping to ensure your items remain safe during handling and transit</p>
+    
+    <button>Book Service</button>
+</div> -->
+<div class="container">
+    <div class="professional-wrapping"> 
+        <img src="Images/Icons/whitebadge.png" alt="badge">
+        <h4>Professional Item Wrapping</h4>
+        <p>Secure and protective wrapping to ensure your items remain safe during handling and transit</p>
+       
+       <a href="on-site-appointment.html"><button>Book Service</a></button></a>
+    </div>
+
+    <div class="transportation"> 
+        <img src="Images/Icons/whitedeliverytruck.png" alt="delivery-truck">
+        <h4>Reliable Goods Transportation </h4>
+        <p>Efficient and cost-effective transport solutions to move your goods safely and on time.</p>
+
+        <a href="on-site-appointment.html"><button>Book Service</a></button></a>
+    </div>
+</div>
+<div class="container2">
+<div class="expert-wrapping"> 
+    <img src="Images\Icons\plastic-wrap.png" alt="wrapping">
+    <h4>Expert Wrapping & Packing for Overseas Shipping</h4>
+    <p>Specialized packing solutions designed to protect goods for international shipments.</p>
+   
+    <a href="on-site-appointment.html"><button>Book Service</a></button></a>
+</div>
+
+<div class="unpacking"> 
+    <img src="Images\Icons\container.png" alt="container">
+    <h4>Unpacking Solutions for Goods Transportation</h4>
+    <p>Expert unpacking for safe, efficient handling and smooth delivery service process.</p>
+    
+    <a href="on-site-appointment.html"><button>Book Service</a></button></a>
+</div>
+</div>
+<h2>
+    Why Choose Our Transport Service?
+</h2>
+<div class="time">
+    <img src="Images\Icons\time-left.png" alt="time">
+    <p> Reliable and On-Time – Ensures timely deliveries with efficiency, safety, and precision.</p>
+</div>
+
+<div class="money">
+    <img src="Images\Icons\money.png" alt="money">
+    <p> Cost-Effective – Saves on fuel, maintenance, staffing, and overall operational expenses.</p>
+</div>
+
+<div class="shield">
+    <img src="Images\Icons\shield.png" alt="sheild">
+    <p> Safe & Secure – Trained drivers, insurance protection, monitoring, and risk management.</p>
+</div>
+
+<div class="efficient">
+    <img src="Images\Icons\efficient.png" alt="efficient">
+    <p>Convenient & Efficient – Handles all logistics hassle-free with speed and accuracy.</p>
+    <footer>© Jet Blue Transport 2025</footer>
+</div>
+
+
+</body>
+</html>

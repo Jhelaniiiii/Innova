@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", serif;
+}
+
+img {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 15px;
+  width: 45%;
+  height: 83%;
+  box-shadow: 0 0 25px white;
+}
+
+.day {
+  position: relative;
+  left: 10%;
+  margin-top: 4%;
+}
+
+.day h3 {
+  font-weight: 600;
+  position: relative;
+  left: 10%;
+  margin-bottom: 3%;
+}
+
+.time {
+  margin-left: 70%;
+  margin-top: -10.5%;
+  margin-bottom: 2%;
+
+}
+
+.time h3 {
+  margin-bottom: 7%;
+  /* margin-top: %;  */
+  font-weight: 600;
+  /* font-size: em; */
+}
+
+.time p {
+  position: relative;
+  right: 12%;
+  font-weight: 400;
+}
+
+.from,
+.to-container {
+  position: relative;
+  left: 20%;
+  margin-top: 4%;
+}
+
+.from h3,
+.to-container h3 {
+  margin-bottom: 2%;
+  /* margin-top: %;  */
+  font-weight: 600;
+}
+
+.p1 {
+  margin-bottom: 2%;
+  margin-left: 1%;
+}
+
+.p2 {
+  position: relative;
+  right: 10%;
+  margin-bottom: 5%
+}
+
+.specific-info1 {
+  margin-left: 60%;
+  margin-top: -20%;
+}
+
+.specific-info1 h3 {
+  font-weight: 600;
+  margin-bottom: 7%;
+
+}
+
+.specific-info1 p {
+  /* margin-right: 20%; */
+  position: relative;
+  right: 10%;
+  margin-bottom: 20%;
+}
+
+.specific-info2 {
+  position: relative;
+  left: 40%;
+  margin-top: -19%;
+}
+
+.specific-info2 h3 {
+  font-weight: 600;
+}
+
+.specific-info2 p {
+  position: relative;
+  right: 5%;
+  margin-bottom: 8%;
+
+}
+
+.service {
+  margin-left: 17%;
+  position: relative;
+  top: 4%;
+}
+
+.service h3 {
+  font-weight: 600;
+}
+
+.service p {
+  position: relative;
+  left: 50%;
+  margin-top: -4%;
+}
+
+.bookapt-btn {
+  position: relative;
+  left: 10%;
+  top: 10%;
+  border: none;
+  background-color: #639AD2;
+  color: white;
+  font-size: 1.1em;
+  width: 35%;
+  height: 9%;
+  font-weight: 600;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.bookapt-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 25px #639AD2;
+}
+
+.edit {
+  position: relative;
+  left: 30%;
+  top: 10%;
+  border: none;
+  background-color: #639AD2;
+  color: white;
+  font-size: 1.1em;
+  width: 15%;
+  height: 9%;
+  font-weight: 600;
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.edit:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 25px #639AD2;
+}
+
+.cancel-btn {
+  /* margin-top: -20%; */
+  position: absolute;
+  left: 80%;
+  top: 90%;
+  width: 15%;
+  padding: 5px;
+  height: 7%;
+  z-index: 1000;
+  border: none;
+  background-color: red;
+  color: white;
+  font-size: 1em;
+  font-weight: 700;
+  border-radius: 10px;
+  /* top: -10%; */
+  transition: all 0.3s ease-in-out;
+}
+
+.cancel-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px red;
+}
+
+hr {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 5%;
+  /* color: #639AD2; */
+  border: 1px solid #639AD2;
+}
+
+@media (min-width:1440px) {
+  body {
+    font-size: 150%;
+  }
+
+  section {
+    border-radius: 25px;
+  }
+}

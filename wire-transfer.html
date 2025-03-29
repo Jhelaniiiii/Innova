@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wire Transfer - JetBlue Transport</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="wire-transfer.css">
+</head>
+<body>
+    <div class="transfer-container">
+        <div class="transfer-form">
+            <h1>Wire Transfer</h1>
+            <p class="encryption-note">Protected with bank-grade encryption & security</p>
+
+            <form id="wireTransferForm">
+                <section class="sender-details">
+                    <h2>Sender Details</h2>
+                    <div class="form-group">
+                        <label for="senderName">Full Name</label>
+                        <input type="text" id="senderName" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group1">
+                        <label for="senderBank">Bank</label>
+                        <select id="senderBank" required>
+                            <option value="">Select Bank</option>
+                            <option value="bank1">Republic Bank</option>
+                            <option value="bank2">First Citizens</option>
+                            <option value="bank3">ScotiaBank</option>
+                            <option value="bank4">RBC</option>
+                            <option value="bank5">JMMB</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="senderAccount">Account Number</label>
+                        <input type="text" id="senderAccount" placeholder="5534 5678 0012 3456" required>
+                    </div>
+                </section>
+
+                <section class="recipient-details">
+                    <h2>Recipient Details</h2>
+                    <div class="form-group">
+                        <label for="recipientName">Full Name</label>
+                        <input type="text" id="recipientName" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group2">
+                        <label for="recipientBank">Bank</label>
+                        <select id="recipientBank" required>
+                            <option value="">Select Bank</option>
+                            <option value="bank1">Republic Bank</option>
+                            <option value="bank2">First Citizens</option>
+                            <option value="bank3">ScotiaBank</option>
+                            <option value="bank4">RBC</option>
+                            <option value="bank5">JMMB</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipientAccount">Account</label>
+                        <input type="text" id="recipientAccount" placeholder="5678 5432 0098 7654" required>
+                    </div>
+                </section>
+
+                <div class="form-group3">
+                    <label for="amount">Amount (TTD)</label>
+                    <input type="number" id="amount" placeholder="$ 0.00" required>
+                </div>
+
+                <div class="form-group4">
+                    <label for="securityCode">Security Code (OTP)</label>
+                    <input type="text" id="securityCode" placeholder="Enter 6 - digit code" required>
+                </div>
+
+                <button type="submit" class="send-money-btn" href="wiretransferconfirm.html">Send Money</button>
+            </form>
+
+            <footer>
+                <p>&copy; Jet Blue Transport 2025</p>
+            </footer>
+        </div>
+
+        <div class="transfer-summary">
+            <div class="amount-details">
+                <div class="total-amount">
+                    <h3>Total Amount</h3>
+                    <p class="amount"></p>
+                </div>
+
+                <div class="fee">
+                    <h3>Fee</h3>
+                    <p></p>
+                </div>
+
+                <div class="transfer-amount">
+                    <h3>Transfer Amount</h3>
+                    <p></p>
+                </div>
+
+                <div class="estimated-arrival">
+                    <h3>Estimated Arrival</h3>
+                    <p></p>
+                </div>
+            </div>
+
+            <!-- <div class="security-notices">
+                <div class="notice">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <p>Your wire transfer is protected with bank-grade encryption.</p>
+                </div>
+
+                <div class="notice">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    <p>We use industry-standard encryption to protect your data.</p>
+                </div>
+
+                <div class="notice">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 8v4"></path>
+                        <path d="M12 16h.01"></path>
+                    </svg>
+                    <p>We comply with transport industry financial regulations for seamless transactions.</p>
+                </div>
+            </div>-->
+        </div>
+    </div> 
+    <script src="wire-transfer.js"></script>
+</body>
+</html>

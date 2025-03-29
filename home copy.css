@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body{
+    background-color: #F4F8FF ;
+    font-family: "Roboto", serif;
+}
+nav {
+    position: absolute; 
+    top: 5%; 
+    left: 5%; 
+    z-index: 2; 
+    opacity: 0; 
+    animation: fadeIn 0.8s ease-in-out forwards; 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+nav ul {
+    display: flex; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 10%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.6vw;
+    font-weight: bold;
+    color: #F4F8FF; 
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Glow effect on hover */
+nav ul li a:hover {
+    text-shadow: 0 0 15px #639AD2, 0 0 25px #639AD2;
+}
+
+/* Vertical line for active page */
+
+.nav-item {
+    position: relative;
+    padding-left: 14px; /* Space for vertical line */
+}
+
+.nav-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -100%; /* Start hidden below */
+    width: 4px;
+    height: 100%;
+    background-color: #639AD2;
+    opacity: 0; /* Initially hidden */
+    transition: bottom 0.3s ease-in-out, opacity 0.3s;
+}
+
+/* Move the line up and show it on hover */
+.nav-item.hovered::before,
+.nav-item.active::before { /* Keep it visible for the active page */
+    bottom: 0;
+    opacity: 1;
+}
+
+
+
+video {
+     /* Specify unit for height */
+    width: 98.9vw; /* Default for laptop */
+    z-index: 1;
+}
+
+@media (min-width: 1440px) { /* Adjust for larger monitors */
+    video {
+        width: 99.2vw;
+    }
+}
+.signin{
+    position: absolute;
+    bottom: 91%;
+    z-index: 3;
+    left: 75%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.6vw;
+    
+}
+.signin a{
+    text-decoration: none;
+    color: #F4F8FF;
+    font-weight: bolder;
+}
+.getstarted{
+    position: absolute;
+    bottom: 89.5%;
+    z-index: 3;
+    left: 81%;
+    background-color: transparent;
+    border: 2px solid #F4F8FF;
+    border-radius: 25px;
+    font-size: 1.6vw;
+    background-color: #639AD2;
+    padding: 10px;
+}
+.getstarted a{
+    text-decoration: none;
+    color: #F4F8FF;
+    font-weight: bolder;
+}
+.getstarted:hover {
+    box-shadow: 0 0 15px #F4F8FF; 
+    transform: translateY(-5px); 
+    transition: 0.3s ease-in-out;
+}
+.bookaptbtn1 {
+    position: absolute;
+    bottom: 82%; /* Default for monitor */
+    z-index: 3;
+    left: 77%;
+    background-color: #639AD2;
+    border: 2px solid #F4F8FF;
+    border-radius: 20px;
+    font-size: 1.4vw;
+    padding: 10px 20px;
+}
+
+/* Adjust for laptop */
+@media (max-width: 1366px) { 
+    .bookaptbtn1 {
+        bottom: 80%;
+    }
+}
+
+.bookaptbtn1 a{
+    text-decoration: none;
+    color: #F4F8FF;
+    font-weight: bolder;
+}
+.bookaptbtn1:hover {
+    box-shadow: 0 0 15px #F4F8FF; 
+    transform: translateY(5px); 
+    transition: 0.3s ease-in-out;
+}
+h1{
+    position: absolute;
+    bottom: 40%;
+    left: 50%; 
+    transform: translateX(-50%); 
+    text-align: center;
+    width: max-content;
+    font-size: 11vw;
+    color: #F4F8FF;
+}
+.mainh2{
+    position: absolute;
+    bottom: 35%;
+    left: 70%; 
+    transform: translateX(-50%); 
+    text-align: center;
+    width: max-content;
+    font-size: 2.5vw;
+    color: #F4F8FF;
+}
+h3{
+    position: absolute;
+    bottom: 10%;
+    left: 20%; 
+    transform: translateX(-50%); 
+    text-align: center;
+    width: max-content;
+    font-size: 1.8vw;
+    color: #F4F8FF;
+}
+.bookaptbtn2 {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0px 30px; 
+    background-color: #639AD2;
+    border: 2px solid white;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 0%;
+    left: 7%; 
+}
+
+.bookaptbtn2 a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.5em;
+    flex-grow: 1; 
+}
+.bookaptbtn2:hover {
+    box-shadow: 0 0 15px #F4F8FF; 
+    transform: translateX(10px); 
+    transition: 0.3s ease-in-out;
+}
+.bookaptbtn2 img {
+    width: 50px; 
+    height: auto; 
+    margin-left: 60px;
+}
+.request{
+    font-size: 3vw;
+    color: #639AD2;
+    font-weight: bold;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    white-space: normal; 
+    width: 40%;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+.quote-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 2px 20px;
+    background-color: #639AD2;
+    border: 4px solid ;
+    border-radius: 30px;
+    font-size: 0.6em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    cursor: default; 
+    position: relative;
+    margin-top: 5%;
+}
+
+
+.arrow-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px; 
+    height: 70px;
+    border: 2px solid white; 
+    border-radius: 30px;
+    background: transparent;
+    transition: background 0.3s ease;
+    margin-left: 170px;
+}
+
+.arrow-link:hover {
+    background: white; 
+}
+
+/* Arrow image */
+.arrow-link img {
+    width: 100%; 
+    height: auto;
+}
+.cust-review {
+    margin-left: 55%;
+    position: relative;
+    margin-top: -16%;
+    width: 40%;
+    border: 3px solid #639AD2;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #639AD2; /* Initial glow effect */
+    padding: 10px;
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+/* Apply the circular moving shadow animation on hover */
+.cust-review:hover {
+    animation: movingShadow 1s infinite;
+}
+
+/* Keyframes for a circular moving box shadow */
+@keyframes movingShadow {
+    0% {
+        box-shadow: 5px 0px 15px #639AD2;
+    }
+    25% {
+        box-shadow: 0px 5px 15px #639AD2;
+    }
+    50% {
+        box-shadow: -5px 0px 15px #639AD2;
+    }
+    75% {
+        box-shadow: 0px -5px 15px #639AD2;
+    }
+    100% {
+        box-shadow: 5px 0px 15px #639AD2;
+    }
+}
+
+.cust-review h2 {
+    font-size: 1.5vw;
+    color: #639AD2;
+}
+
+.name {
+    font-size: 1.3vw;
+    font-weight: 600;
+    margin-left: 13%; 
+    position: absolute;
+    bottom: 48%;
+}
+
+.cust-review img {
+    width: 10%;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 4%;
+}
+
+.review {
+    position: absolute;
+    bottom: 25%;
+    left: 13%;
+    font-size: 1.2vw;
+}
+
+.oval {
+    border: 2px black solid;
+    width: 14%;
+    border-radius: 30px;
+    margin-top: 2%;
+    padding: 7px 7px 8px 7px;
+}
+
+.oval p {
+    margin-top: 5%;
+    position: relative;
+    left: 10%;
+    font-size: 1.2vw;
+}
+
+.oval img {
+    width: 4%;
+    height: auto;
+    position: absolute;
+    bottom: 10%;
+    left: 9.5%;
+}
+
+@media (min-width:1400px) {
+    .oval img{
+        bottom: 8%;
+    }
+}
+
+footer{
+    margin-top: 7%;
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+@media (max-width: 500px) {
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      display: list;
+    }
+    
+    nav .nav {
+        display: list;/* Horizontal on mobile */
+      justify-content: space-around;
+    }
+    
+    .nav-item {
+      flex: 1;
+      text-align: center;
+      margin-bottom: 0;
+      display: list;
+    }
+    
+    .nav-item a {
+      padding: 12px 0;
+      font-size: 12px; /* Smaller font for mobile */
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  
+  /* For very small screens, adjust the font size */
+  @media (max-width: 374px) {
+    .nav-item a {
+      font-size: 10px;
+      padding: 10px 0;
+    }
+  }

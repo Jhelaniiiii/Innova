@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="getquote copy.css">
+    <title>Quote | JetBlue Transport</title>
+</head>
+
+<body>
+    <!-- Back Button -->
+    <button class="back-btn" onclick="window.location.href='home.html'">
+        <img src="Images/Icons/back-button.png" alt="Back">
+    </button>
+
+    <section class="inside">
+
+        <div class="left-side">
+            <p class="upper-left-inside">JetBlue Transport</p>
+            <p class="getquote">Get a quote from us today</p>
+            <h2>Save Time and Money on <br>Your Next Move</h2>
+
+            <div class="our-mission">
+                <img src="Images/Icons/goal.png" alt="Goal">
+                <h4>Our Mission</h4>
+                <p>Our mission is to provide reliable, efficient, and affordable transport solutions
+                    that ensure seamless, stress-free moves for every customer.</p>
+            </div>
+
+            <div class="people-choice">
+                <img src="Images/Icons/people.png" alt="People">
+                <h4>People's Choice</h4>
+                <p>Trusted for reliable, affordable, and efficient moving services every time.</p>
+            </div>
+
+            <div class="our-experience">
+                <img src="Images/Icons/truck.png" alt="Truck">
+                <h4>Our Experience</h4>
+                <p>With years of experience, we provide professional and seamless moving services every time.</p>
+            </div>
+        </div>
+    </section>
+    <section class="right-side">
+        <h5>Provide your details</h5>
+        <form method="get" action="quoteconfirmation.html">
+            <div class="name">
+                <p>Name</p>
+                <input type="text" name="name" id="name-input" placeholder="John Doe" required>
+            </div>
+
+            <div class="email">
+                <p>Email</p>
+                <input type="email" name="email" id="email-input" placeholder="example@gmail.com" required>
+            </div>
+
+            <div class="service">
+                <p>Service</p>
+                <input type="text" name="service" id="service-input" placeholder="Transport" required>
+            </div>
+
+            <div class="items">
+                <p>Item/Items</p>
+                <input type="text" name="items" id="items-input" placeholder="Refrigerator, Stove">
+            </div>
+
+            <div class="from">
+                <p>From</p>
+                <input type="text" name="from" id="from-input" placeholder="Arima" required>
+            </div>
+
+            <div class="to">
+                <p>To</p>
+                <input type="text" name="to" id="to-input" placeholder="San Fernando" required>
+            </div>
+
+            <button type="submit" class="getquote-btn" ><a href="quoteconfirmation.html">Get Quote</a></button>
+        </form>
+    </section>
+    </section>
+
+
+</body>
+
+</html>

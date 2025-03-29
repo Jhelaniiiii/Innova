@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="testimonials.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials | JetBlue Transport</title>
+</head>
+<body>
+    <nav>
+        <ul class="nav">
+          <li class="nav-item"><a href="home.html">Home</a></li>
+          <li class="nav-item"><a href="services.html">Services</a></li>
+          <li class="nav-item"><a href="on-site-appointment.html">Appointment</a></li>
+          <li class="nav-item active"><a href="#">Testimonials</a></li>
+        </ul>
+      </nav>
+     
+      <script>
+     document.querySelectorAll(".nav-item").forEach(item => {
+    item.addEventListener("mouseenter", () => {
+        item.classList.add("hovered");
+    });
+
+    item.addEventListener("mouseleave", () => {
+        item.classList.remove("hovered");
+    });
+
+    item.addEventListener("click", () => {
+        // Remove active class from all items
+        document.querySelectorAll(".nav-item").forEach(nav => 
+            nav.classList.remove("active")
+        );
+        // Add active class to the clicked item
+        item.classList.add("active");
+    });
+});
+
+    </script>
+     <img src="Images\Icons\newjetbluelogo.png" alt="JetBlue" class="logo">
+     <a href="customer-profile.html"><img src="Images\Icons\newuser.png" alt="user" class="user"></a>
+     <h1>What Our Customers Say - Real Experiences, Reliable Service!</h1>
+
+     <section class="michealcarter">
+        <img src="Images\Icons\micheal3.jpg" alt="Micheal Carter">
+        <h2>Micheal Carter</h2>
+        <p>JetBlue Transport exceeded my expectations! Their delivery was on time, and the tracking updates kept me informed throughout. Highly reliable service!</p>
+        <div class="oval">
+            <p>5.0</p>
+            <img src="Images\Icons\blackstar.png" alt="Black Star">
+        </div>
+     </section>
+
+     <section class="samanthareynolds">
+        <img src="Images\Icons\samantha2.jpg" alt="Samantha Reynolds">
+        <h2>Samantha Reynolds</h2>
+        <p>Smooth and hassle-free experience. The drivers were professional, and my cargo arrived safely. Definitely using JetBlue Transport again!</p>
+        <div class="oval">
+            <p>4.2</p>
+            <img src="Images\Icons\blackstar.png" alt="Black Star">
+        </div>
+     </section>
+
+     <section class="davidmitchell">
+        <img src="Images\Icons\david2.jpg" alt="David Mitchell">
+        <h2>David Mitchell</h2>
+        <p>Great customer support and efficient transportation services. They handled my shipment with care and delivered it earlier than expected</p>
+        <div class="oval">
+            <p>4.5</p>
+            <img src="Images\Icons\blackstar.png" alt="Black Star">
+        </div>
+     </section>
+
+     <section class="jessicalopez">
+        <img src="Images\Icons\jessica2.jpg" alt="Jessica Lopez">
+        <h2>Jessica Lopez</h2>
+        <p>Affordable rates with top-notch service. The booking process was simple, and my goods were transported without any issues. Highly recommend!</p>
+        <div class="oval">
+            <p>4.7</p>
+            <img src="Images\Icons\blackstar.png" alt="Black Star">
+        </div>
+     </section>
+     <!-- Left Side Testimonials -->
+<section class="feliciagomez">
+    <img src="Images/Icons/felicia.jpg" alt="Felicia Gomez">
+    <h2>Felicia Gomez</h2>
+    <p>Great service with exceptional care. I felt valued and my items were delivered safely and promptly!</p>
+    <div class="oval">
+      <p>4.8</p>
+      <img src="Images/Icons/blackstar.png" alt="Black Star">
+    </div>
+  </section>
+  
+  <section class="kennyjohnson">
+    <img src="Images/Icons/kenny.jpg" alt="Kenny Johnson">
+    <h2>Kenny Johnson</h2>
+    <p>Reliable and efficient transportation service. Their professionalism exceeded my expectations!</p>
+    <div class="oval">
+      <p>4.9</p>
+      <img src="Images/Icons/blackstar.png" alt="Black Star">
+    </div>
+  </section>
+  
+  <!-- Right Side Testimonials -->
+  <section class="ashwilliams">
+    <img src="Images/Icons/ash2.jpg" alt="Ashley Williams">
+    <h2>Ashley Williams</h2>
+    <p>Efficient service and friendly staff. Booking was a breeze and everything went smoothly!</p>
+    <div class="oval">
+      <p>4.6</p>
+      <img src="Images/Icons/blackstar.png" alt="Black Star">
+    </div>
+  </section>
+  
+  <section class="harrythompson">
+    <img src="Images/Icons/harry.jpg" alt="Harry Thompson">
+    <h2>Harry Thompson</h2>
+    <p>Top-notch transportation with care and precision. Highly recommend for any shipping needs!</p>
+    <div class="oval">
+      <p>4.7</p>
+      <img src="Images/Icons/blackstar.png" alt="Black Star">
+    </div>
+  </section>
+  
+     <footer>© Jet Blue Transport 2025</footer>
+</body>
+</html>

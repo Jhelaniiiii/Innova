@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details - JetBlue Transport</title>
+    <link rel="stylesheet" href="payment-details.css">
+</head>
+<body>
+    <div class="payment-container">
+        <div class="payment-form">
+            <h1>Payment Details</h1>
+            <p class="encryption-note">Your payment is secure & encrypted</p>
+
+            <form id="paymentForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cardholderName">Cardholder Name</label>
+                        <input type="text" id="cardholderName" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expiryDate">Expiry Date</label>
+                        <input type="text" id="expiryDate" placeholder="MM/YY" required maxlength="5">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required maxlength="19">
+                    </div>
+                    <div class="form-group cvv-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="123" required maxlength="3">
+                    </div>
+                </div>
+
+                <div class="payment-methods">
+                    <img src="images/PayPal_Image.png" alt="PayPal" class="payment-icon">
+                    <img src="images/Mastercard_Image.png" alt="Mastercard" class="payment-icon">
+                    <img src="images/Visa_Card_Image.png" alt="Visa" class="payment-icon">
+                </div>
+
+                <button type="submit" class="make-payment-btn">Make Payment</button>
+            </form>
+
+            <div class="alternative-payments">
+                <button class="wire-transfer-btn">Wire Transfer</button>
+                <button class="pay-arrival-btn">Pay Upon Arrival</button>
+            </div>
+        </div>
+
+        <div class="payment-summary">
+            <div class="amount-details">
+                <div class="total-amount">
+                    <h3>Total Amount</h3>
+                    <p class="amount">$3,000.00</p>
+                </div>
+
+                <div class="subtotal">
+                    <h3>Total(VAT Exclusive)</h3>
+                    <p>$2,666.67</p>
+                </div>
+
+                <div class="vat">
+                    <h3>VAT</h3>
+                    <p>$375.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="payment-details.js"></script>
+</body>
+</html>

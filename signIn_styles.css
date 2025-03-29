@@ -1,0 +1,133 @@
+/*Form Box*/
+.apply-box{
+    width: 600px;
+    height: 600px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 70px #0080ff;
+
+    padding: 50px;
+    color: #005C88;
+}
+.apply-box h1{
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+.apply-box h3{
+    margin-bottom: 55px;
+    color: #639AD2;
+}
+#form-control-main{
+    width: 310px;
+    margin-bottom: 100px;
+    position: relative;
+    left: 100px;
+}
+.form-control{
+    width: 310px;
+    height: 100px;
+}
+.form-control label{
+    font-size: 25px;
+    font-weight: 500;
+    color: #000;
+}
+input{
+    padding: 6px 10px;
+    background-color: #D6D6D6;
+    color: #000;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+input:focus{
+    outline-color: royalblue;
+}
+.button-container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+button {
+    color: #013E7C;
+    background-color: #639AD2;
+    border: transparent solid 2px;
+    border-radius: 8px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+    font-weight: 500;
+}
+button:hover{
+    background-color: #013E7C;
+    color: #fff;
+    box-shadow: 0 4px 30px rgb(0, 119, 255);
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+.remember-forgot a{
+    text-decoration: none;
+    color: #639AD2;
+}
+/*Text Box*/
+.textbox1{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 25;
+}
+.textbox1 p{
+    margin: 50px;
+    font-size: 1.5em;
+}
+.textbox1 h1{
+    font-size: 36px;
+    color: #1D7199;
+}
+.textbox2{
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 13;
+    grid-column-end: 14;
+
+}
+.textbox2 p{
+    margin: 50px;
+    font-size: 1.5em;
+}
+.textbox3{
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 25;
+
+}
+.textbox3 p{
+    margin: 50px;
+    font-size: 1.5em;
+}
+.textbox4{
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: 2;
+    grid-column-end: 25;
+
+}
+.textbox4 p{
+    margin: 50px;
+    font-size: 1.5em;
+}
+.textbox5{
+    grid-row-start: 7;
+    grid-row-end: 8;
+    grid-column-start: 2;
+    grid-column-end: 25;
+
+}
+.textbox5 p{
+    margin: 50px;
+    font-size: 1.5em;
+}
