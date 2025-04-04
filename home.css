@@ -362,8 +362,260 @@ footer{
     font-size: 1.5vw;
     font-weight: bold;
 }
-@media (max-width:412px) {
+@media(max-width: 1024px){
+    video{
+        width: 100%;
+    }
+    nav ul li a{
+        font-size: 1.3em;
+    }
     .signin{
+        font-size: 1.4em;
+        position: absolute;
+        top: 4%;
+        right: 0%;
+        margin-bottom: 5%;
+    }
+    .getstarted{
+        font-size: 1.2em;
+        margin-left: 2%;
+        margin-top: 20%;
+       position: absolute;
+       /* top: 0%; */
+    }
+    .bookaptbtn1{
+        display: none;
+    }
+    .bookaptbtn2{
+        position: relative;
+        /* bottom: -20%; */
+        margin-top: -20%;
+        height: 8vw;
+        font-size: 1.2em;
+        margin-left: 20%;
+        margin-bottom: 10%;
+    }
+    .request{
+        margin-top: 15%;
+        margin-left: 10%;
+    }
+    .request p{
+        font-size: 1.3em;
+        width: 60vw;
+    }
+    .quote-btn{
+        font-size: 0.8em;
+    }
+    .cust-review{
+        position: relative;
+        margin-top: 8%;
+        right: 45%;
+        width: 70vw;
+        height: 30vw;
+    }
+    .cust-review h2{
+        font-size: 1.7em;
+    }
+    .name{
+        font-size: 1.5em;
+        position: absolute;
+        top: 35%;
+    }
+    .review{
+        font-size: 1.3em;
+        position: absolute;
+        top: 50%;
+    }
+    .oval{
+      margin-top: 8%;
+      margin-left: 5%;
+      height: 5vw;
+    }
+    .oval p{
+        font-size: 1.3em;
+    }
+    .oval img{
+        margin-left: 4%;
+    }
+    footer{
+        font-size: 2em;
+    }
+    h1{
         
+        position: absolute;
+        top: 15%;
+    }
+    .mainh2{
+       
+        position: absolute;
+        top: 30%;
+        left: 40%;
+        font-size: 2em;
     }
 }
+@media (max-width: 768px) {
+    nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        top: auto;
+        width: 100%;
+        height: 5vw;
+        font-size: 1.5em;
+        background-color: #639AD2;
+        box-shadow: 0 -2px 10px rgba(102, 71, 71, 0.1);
+        z-index: 1000;
+        animation: none;
+        opacity: 1;
+    }
+
+    
+    nav ul {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        justify-content: space-around;
+        list-style: none;
+    }
+    
+    nav ul li {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        font-size: 20px;
+        padding: 12px 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+    }
+    
+    /* For the indicator line, move it to the top for bottom navigation */
+    .nav-item {
+        position: relative;
+    }
+    
+    .nav-item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0; /* Changed from bottom to top */
+        width: 100%; /* Full width instead of 4px */
+        height: 3px; /* Small height for a line indicator */
+        background-color: white;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    
+    .nav-item.hovered::before,
+    .nav-item.active::before {
+        opacity: 1;
+    }
+
+    h1 {
+        font-size: 5em;
+        bottom: auto;
+        top: 10%; /* Moved up */
+        
+    }
+ 
+    .mainh2 {
+       font-size: 1.7em;
+        width: 60vw;
+        bottom: auto;
+        top: 20%; /* Moved up */
+        left: 50%;
+        
+    }
+    
+    .signin {
+       position: absolute;
+       left: 10%;
+       width: 10vw;
+        top: 5%;
+        font-size: 3vw;
+    }
+    
+    .getstarted {
+        position: absolute;
+       margin-top: 10%;
+        bottom: 92%;
+       left: 25%;
+    }
+    
+    .bookaptbtn1 {
+        bottom: auto; 
+        top: 15%;
+        font-size: 2.5vw; /* Made smaller */
+    }
+    .bookaptbtn2 {
+        width: 50vw;
+        height: 7vw;
+        position: absolute;
+        top: 45%;
+        font-size: 0.8em;
+    }
+    .request {
+        margin-top: 2%;
+    }
+    .request p{
+        font-size: 1.1em;
+    }
+    
+    .quote-btn {
+        width: 50vw; /* Made smaller */
+    }
+    
+    .arrow-link {
+        margin-left: 10%;
+    }
+    
+    .cust-review {
+        /* width: 90%; */
+        margin-left: 55%;
+        margin-top: 10%;
+    }
+    
+    .cust-review h2 {
+        font-size: 2.5vw;
+    }
+    
+    .name {
+        font-size: 2.4vw;
+    }
+    
+    .review {
+        font-size: 2vw; 
+        margin-left: 2%;
+    }
+    
+    .oval {
+        width: 12vw;
+    }
+    
+    .oval p {
+        font-size: 3vw;
+        margin-top: -5%;
+    }
+    .oval img{
+        margin-left: 8%;
+    }
+    h3 {
+        font-size: 4vw;
+        bottom: 15%; /* Moved up */
+    }
+    
+   
+    
+    footer {
+        margin-bottom: 10%; /* Made bigger */
+    }
+}
+
+
+
