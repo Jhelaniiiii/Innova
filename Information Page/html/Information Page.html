@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="shortcut icon" href="../Images/Jet_Blue_LOGO.jpg">
+        <!--ICONS-->
+        <script src="https://kit.fontawesome.com/f79fc3db1c.js" crossorigin="anonymous"></script>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
+        <!--STYLESHEET-->
+        <link rel="stylesheet" href="../css/information_style.css"/>
+
+        <title>Information Page | Jetblue Transport</title>
+    </head>
+    <body>  
+
+        <div class="main-container">
+
+            <img src="../Images\Icons\newjetbluelogo.png" alt="JetBlue" class="jetblue-img">
+            <nav>
+                <ul class="nav">
+                <li class="nav-item "><a href="home.html">Home</a></li>
+                <li class="nav-item"><a href="services.html">Services</a></li>
+                <li class="nav-item active"><a href="">Appointment</a></li>
+                <li class="nav-item"><a href="testimonials.html">Testimonials</a></li>
+                </ul>
+            </nav>
+
+            <script>
+                    document.querySelectorAll(".nav-item").forEach(item => {
+                    item.addEventListener("mouseenter", () => {
+                        item.classList.add("hovered");
+                    });
+
+                    item.addEventListener("mouseleave", () => {
+                        item.classList.remove("hovered");
+                    });
+                    
+                    item.addEventListener("click", () => {
+                        // Remove active class from all items
+                        document.querySelectorAll(".nav-item").forEach(nav => 
+                            nav.classList.remove("active")
+                        );
+                        // Add active class to the clicked item
+                        item.classList.add("active");
+                    });
+                });
+
+            </script>
+
+            <a href="customer-profile.html"><img src="../Images\Icons\newuser.png" alt="user" class="user"></a>
+            
+
+                <!--Textbox-->
+                <section class="textbox-1">
+                    <div class="writeUp">
+                        <h1>Where We Started</h1>
+                        <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae saepe neque aspernatur distinctio animi sint, odio asperiores quasi, 
+                        error perspiciatis vitae! Tempora amet veritatis eveniet ipsum repudiandae reprehenderit sunt libero molestias sapiente rem? Asperi
+                        ores et maxime quo ullam doloremque laudantium quae natus ipsa, temporibus accusamus tempora, ratione quibusdam officia reprehender
+                        it repudiandae velit sed? Vel alias laudantium est deserunt ipsam, illo omnis optio aperiam totam delectus dolore eum esse voluptate
+                        nulla consequuntur, minus magnam neque pariatur obcaecati! Dolorum similique saepe in voluptatibus porro laudantium ipsam, voluptat
+                        es iure modi consequatur? Iure ipsam rem nisi molestiae aliquam nobis nihil aperiam odio obcaecati unde magni in eligendi harum quo,
+                            assumenda laudantium illum impedit repudiandae hic? Magnam eum, repellat similique facere illum ullam consequatur ipsa. Excepturi 
+                            at blanditiis, nesciunt ullam doloremque ea dolores enim doloribus quaerat assumenda expedita laboriosam sit! Odio laborum neque op
+                            tio explicabo fugiat officiis facilis cupiditate delectus alias. Nesciunt libero, deserunt iste numquam exercitationem aspernatur 
+                            eos consectetur tempora rem eaque sapiente necessitatibus laudantium beatae nulla quidem! Doloremque officiis repellendus tempore v
+                            oluptatibus ipsam iure ducimus impedit quaerat vero deserunt enim pariatur blanditiis, perferendis non quis eveniet beatae veritati
+                        </p>
+                    </div>
+                    <div class="img">
+                        <img src="../Images/ownerSmiling.jpeg" width="150" alt="Owner of JetBlue Transport"/>
+                    </div>
+                </section>
+                            <!--Color Box-->
+                            <section class="colorbox-1">About Us</section>
+
+                            <!--Photo boxes-->
+                            <section class="picbox-1"></section>
+            
+                <section class="textbox-2">
+                    <h1>Contact Us</h1>
+                    <div class="contactUs">
+                        <img src="../Images/Icons/icons8-whatsapp-100.png"><p>1(868) 721 - 2443</p>
+                    </div>
+                    <br>
+                    <div class="contactUs">
+                        <img src="../Images/Icons/icons8-facebook-100.png"><a style="text-decoration: none; color: #ffffff;" href="https://www.facebook.com/profile.php?id=100054523206982&mibextid=rS40aB7S9Ucbxw6v">Jetblue Transport</a>
+                    </div>
+                    <br>
+                    <div class="contactUs">
+                        <img src="../Images/Icons/icons8-email-100.png"><p>jetbluett@gmail.com</p>
+                    </div>
+                    <br>
+                </section>
+
+                <!--Photo boxes-->
+                <section class="picbox-2"></section>
+        </div>
+
+
+        <!--Jquery for Nav bar-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js" 
+            integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer"
+        ></script>
+    </body>
+</html>

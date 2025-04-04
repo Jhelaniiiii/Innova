@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+body {
+   min-height: 100vh;
+   background-color: #f0f4f8;
+}
+
+/*Container*/
+.main-container{
+    width: 100%;
+    min-height: 100vh;
+    Display: grid;
+	
+	grid-template-columns: repeat(25, 1fr);
+	grid-template-rows: auto auto auto auto auto auto auto auto;
+	
+
+      gap: 0px;
+
+	box-sizing: border-box;
+
+
+}
+
+/*Nav*/
+nav {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 26;
+
+    position: absolute; 
+    top: 5%; 
+    left: 5%; 
+    z-index: 2; 
+    opacity: 0; 
+    animation: fadeIn 0.8s ease-in-out forwards; 
+    z-index: 3;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+nav ul {
+    display: flex; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 10%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.6vw;
+    font-weight: bold;
+    color: #000000; 
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Glow effect on hover */
+nav ul li a:hover {
+    text-shadow: 0 0 15px #639AD2, 0 0 25px #639AD2;
+}
+
+.nav-item {
+    position: relative;
+    padding-left: 14px; /* Space for vertical line */
+}
+
+.nav-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -100%; /* Start hidden below */
+    width: 4px;
+    height: 100%;
+    background-color: #639AD2;
+    opacity: 0; /* Initially hidden */
+    transition: bottom 0.3s ease-in-out, opacity 0.3s;
+}
+
+/* Move the line up and show it on hover */
+.nav-item.hovered::before,
+.nav-item.active::before { /* Keep it visible for the active page */
+    bottom: 0;
+    opacity: 1;
+}
+.jetblue-img{
+    width: 8%;
+    height: auto;
+    position: absolute;
+    margin-left: 1%;
+    margin-top: 1%;
+    z-index: 3;
+}
+.user{
+  width: 4vw;
+  position: absolute;
+  right: 10%;
+  top: 3%;
+  z-index: 3;
+}
+
+/*Text-Block*/
+.textbox-1{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 26;
+
+    display: flex;
+    justify-content: space-between;
+}
+.textbox-1{
+    color: #000000;
+    background-color: #f0f4f8;
+}
+.writeUp{
+    margin: 50px;
+    max-width: 900px;
+    width: 100%;
+}
+.writeUp h1{
+    margin-bottom: 50px;
+    font-size: 48px;
+}
+.writeUp p{
+    font-size: 20px;
+}
+.img img{
+    border-radius: 15px;
+    margin: 50px;
+    height: 500px;
+    width: 500px;
+}
+
+.textbox-2{
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 14;
+    grid-column-end: 26;
+    color: #ffffff;
+    background-color: #2C5890;
+}
+.textbox-2 h1{
+    text-align: center;
+    margin: 50px;
+    font-size: 48px;
+}
+.contactUs{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+}
+.contactUs img{
+    float: left;
+    margin-right: 50px;
+}
+
+
+
+/*Color Box*/
+.colorbox-1{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 26;
+    z-index: 2;
+    width: 100%;
+
+    background: linear-gradient(to bottom, #f0f4f8, #006eff77);
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    color: #ffffff;
+    font-size: 96px;
+    font-weight: 600;
+}
+/*Photo Boxes*/
+.picbox-1{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 26; 
+
+    display: flex;
+    width: 100%;
+    height: 950px;
+    max-height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../Images/truckjetblue.jpg);
+    background-attachment: fixed;
+}
+
+.picbox-2{
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 14; 
+    display: flex;
+    height: 600px;
+    max-height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../Images/jerry.jpg);
+    box-shadow: inset -10px 10px 20px 10px #00000081;
+}
