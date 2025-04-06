@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="customer-profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | JetBlue Transport</title>
+</head>
+<body>
+    <img src="Images\Icons\newjetbluelogo.png" alt="JetBlue" class="jetblue-img">
+    <h2>JetBlue Transport</h2>
+    <video loop autoplay muted>
+        <source src="Images\gps.mp4" type="video/mp4">.
+    </video>
+    <section>
+        <a href="home.html"><img src="Images\Icons\back2.png" alt="back" class="back"></a>
+        <img src="Images\Icons\cust-user.png" alt="user" class="user">
+        <h1 class="name">Franky Jule</h1>
+        <p class="email">Email</p>
+        <p class="email2">frankyjule@gmail.com</p>
+        <p class="password">Password</p>
+        <p class="password2">
+            <span id="passwordText">********</span>
+            <img src="Images/Icons/eye.png" alt="Show Password" id="togglePassword" class="toggle-icon">
+        </p>
+        
+        <script>
+            document.getElementById("togglePassword").addEventListener("click", function () {
+                let passwordText = document.getElementById("passwordText");
+                let toggleIcon = document.getElementById("togglePassword");
+        
+                if (passwordText.textContent === "********") {
+                    passwordText.textContent = "frankyjule123"; // Show actual password
+                    toggleIcon.src = "Images/Icons/witness.png"; // Change icon
+                } else {
+                    passwordText.textContent = "********"; // Hide password
+                    toggleIcon.src = "Images/Icons/eye.png"; // Change back
+                }
+            });
+        </script>
+        
+        <div class="next-appt">
+            <h4>Next Appointment</h4>
+            <p>10/03/2025</p>
+        </div>
+        <button href="home.html" class="new-appt">Create a new appointment</button>
+        <button class="logout">Log out <img src="Images\Icons\exit.png" alt="exit"></button>
+
+    </section>
+    
+</body>
+</html>

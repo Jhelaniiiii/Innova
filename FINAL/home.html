@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="home.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="Images\Icons\truck.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | JetBlue Transport</title>
+</head>
+
+<body>
+    <nav>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- Overlay wrapper -->
+        <div class="nav-overlay">
+            <ul class="nav">
+                <li class="nav-item active"><a href="#">Home</a></li>
+                <li class="nav-item"><a href="services.html">Services</a></li>
+                <li class="nav-item"><a href="on-site-appointment.html">Appointment</a></li>
+                <li class="nav-item"><a href="testimonials.html">Testimonials</a></li>
+            </ul>
+        </div>
+    </nav>
+    <video loop autoplay muted>
+        <source src="officialtruckvid.mp4" type="video/mp4">
+    </video>
+
+    <script>
+        document.querySelectorAll(".nav-item").forEach(item => {
+            item.addEventListener("mouseenter", () => {
+                item.classList.add("hovered");
+            });
+
+            item.addEventListener("mouseleave", () => {
+                item.classList.remove("hovered");
+            });
+
+            item.addEventListener("click", () => {
+                // Remove active class from all items
+                document.querySelectorAll(".nav-item").forEach(nav =>
+                    nav.classList.remove("active")
+                );
+                // Add active class to the clicked item
+                item.classList.add("active");
+            });
+        });
+
+    </script>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navOverlay = document.querySelector('.nav-overlay');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navOverlay.classList.toggle('show');
+        });
+    </script>
+    <button class="signin"><a href="SignIn.html">Sign in</a></button>
+    <button class="getstarted"><a href="signup.html">Get Started</a></button>
+
+    <button class="bookaptbtn1"><a href="on-site-appointment.html
+        ">Book Appointment</a></button>
+
+    <h1>JetBlue Transport</h1>
+    <h2 class="mainh2">Moving Made Simple, Reliable and Affordable</h2>
+
+    <h3>Book an appointment with us today!</h3>
+    <button class="bookaptbtn2"><a href="on-site-appointment.html">Book Appointment</a><img
+            src="Images/Icons/Arrows/whitearrow.png" alt="white arrow" class="white-arrow"></button>
+
+    <div class="request">
+        <p>Request your free quote today for reliable and affordable moving services</p>
+        <button class="quote-btn">
+            Get Quote
+            <a href="getquote.html" class="arrow-link">
+                <img src="Images/Icons/Arrows/diagonal.png" alt="→">
+            </a>
+        </button>
+    </div>
+
+
+    <a href="testimonials.html" style="text-decoration: none; color: black;">
+        <div class="cust-review">
+            <h2>See What Our Happy Customers Are Saying About Their Experience With Us!</h2>
+            <p class="name">Paul George</p>
+            <img src="Images\Icons\white dude.jpg" alt="Paul George">
+            <p class="review">Exceptional service with timely delivery, making our move worry-free and stress-free from
+                start to finish!</p>
+            <div class="oval">
+                <p>4.5</p>
+                <img src="Images\Icons\blackstar.png" alt="Black Star">
+            </div>
+        </div>
+    </a>
+    <footer>© Jet Blue Transport 2025</footer>
+</body>
+
+</html>

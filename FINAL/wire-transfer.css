@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+
+body {
+    /* background-color: #f5f5f5; */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4F8FF;
+}
+
+.transfer-container {
+    display: flex;
+
+
+    /* max-width: 1000px; */
+    width: 100%;
+    /* background: #fff; */
+    /* border-radius: 8px; */
+    overflow: hidden;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+    margin-top: 0px;
+}
+
+
+.transfer-form {
+    flex: 1;
+    padding: 2rem;
+    background: #F4F8FF;
+}
+
+h1 {
+    font-size: 2em;
+    color: #000;
+    margin-bottom: 0.7rem;
+    margin-top: 3%;
+}
+
+.encryption-note {
+    color: #639AD2;
+    font-size: 1.2em;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.2em;
+    color: #9c9c9c;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 3%;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: black;
+    margin-top: 5%;
+}
+
+.sender-details {
+    border: 1px solid #639AD2;
+    border-radius: 20px;
+    padding-left: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+#senderName {
+    width: 25vw;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(201, 201, 201);
+}
+
+#senderName::placeholder {
+    color: #7c7c7c;
+}
+
+#senderBank {
+    width: 25vw;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(201, 201, 201);
+    color: #7c7c7c;
+
+}
+
+#senderBank option {
+    color: black;
+}
+
+.form-group1 {
+    position: relative;
+    left: 55%;
+    margin-top: -15%;
+}
+
+#senderAccount {
+    width: 25vw;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(201, 201, 201);
+}
+
+#senderAccount::placeholder {
+    color: #7c7c7c;
+}
+
+.recipient-details {
+    border: 1px solid #639AD2;
+    border-radius: 20px;
+    padding-left: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-top: 5%;
+}
+
+#recipientName {
+    width: 25vw;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(201, 201, 201);
+}
+
+#recipientName::placeholder {
+    color: #7c7c7c;
+}
+
+#recipientBank {
+    width: 25vw;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(201, 201, 201);
+    color: #7c7c7c;
+}
+
+#recipientBank option {
+    color: black;
+}
+
+.form-group2 {
+    position: relative;
+    left: 55%;
+    margin-top: -15%;
+}
+
+#recipientAccount {
+    width: 25vw;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(201, 201, 201);
+}
+
+.form-group3 {
+    margin-left: 3%;
+}
+
+#amount {
+    width: 25vw;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(201, 201, 201);
+
+}
+
+.form-group4 {
+    margin-left: 3%;
+}
+
+#securityCode {
+    width: 25vw;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(201, 201, 201);
+    margin-bottom: 5%;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    background-color: #f8f8f8;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+input.error,
+select.error {
+    border-color: #ff3b30;
+}
+
+.send-money-btn {
+    width: 20%;
+    /* height: 20%; */
+    padding: 1em 1.5rem;
+    background-color: #639AD2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    /* word-spacing: 10%; */
+    /* position: relative; */
+    /* left: 45%;
+    top: 165%; */
+    margin-left: 40%;
+    margin-top: -5%;
+    /* margin-top: -60px; */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.send-money-btn:hover {
+    background-color: #1D7199;
+}
+
+footer {
+    margin-top: 8rem;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+/* Transfer Summary Styles */
+.transfer-summary {
+    width: 350px;
+    height: 44vw;
+    background-color: #B7D4ED;
+    padding: 2rem;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px 0 0 30px;
+}
+
+.amount-details {
+    margin-bottom: 2rem;
+    /* height: 10%; */
+}
+
+.total-amount {
+    margin-bottom: 2rem;
+}
+
+.total-amount h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0.5rem;
+    margin-top: 8%;
+    text-align: center;
+}
+
+.total-amount .amount {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1D7199;
+    text-align: center;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+.fee,
+.transfer-amount {
+    padding-bottom: 1rem;
+
+    margin-bottom: 1rem;
+    /* border-bottom: 1px solid black; */
+}
+
+.fee h3,
+.transfer-amount h3,
+.estimated-arrival h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 10%;
+    margin-top: 15%;
+    text-align: center;
+}
+
+.fee p,
+.transfer-amount p {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #1D7199;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.estimated-arrival {
+    margin-bottom: 3rem;
+}
+
+.estimated-arrival p {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #1D7199;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.security-notices {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 30px;
+    gap: 120px;
+}
+
+/*
+
+.security-notices {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25 rem;
+    margin-top: 60px;
+    gap: 120px;
+}
+*/
+.notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.notice svg {
+    width: 20px;
+    height: 20px;
+    color: #000;
+    flex-shrink: 0;
+}
+
+.notice p {
+    font-size: 0.813rem;
+    line-height: 1.4;
+    color: #000;
+    margin: 0;
+}
+
+/* Alternative Payment Buttons */
+.alternative-payments {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.wire-transfer-btn,
+.pay-arrival-btn {
+    flex: 1;
+    padding: 0.75rem;
+    background-color: #B7D4ED;
+    border: none;
+    border-radius: 4px;
+    color: #000;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.wire-transfer-btn:hover,
+.pay-arrival-btn:hover {
+    background-color: #9BC1E5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .transfer-container {
+        flex-direction: column;
+        margin: 0;
+        border-radius: 8px;
+    }
+
+    .transfer-form {
+        padding: 1.5rem;
+    }
+
+    .transfer-summary {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .total-amount .amount {
+        font-size: 2rem;
+    }
+
+    .security-notices {
+        margin-top: 2rem;
+    }
+
+    .alternative-payments {
+        flex-direction: column;
+    }
+}
+
+/* Additional Utility Classes */
+.error-message {
+    color: #ff3b30;
+    font-size: 0.813rem;
+    margin-top: 0.25rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Form Field Specific Styles */
+#amount {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#securityCode {
+    letter-spacing: 0.1em;
+}
+
+/* Bank Select Styling */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+}
+
+/* Hover States */
+input:hover,
+select:hover {
+    border-color: #999;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #4A90E2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.1);
+}
+
+/* Button States */
+.send-money-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.send-money-btn:active {
+    transform: translateY(1px);
+}
+
+@media (min-width: 1440px) {
+
+    .sender-details h2,
+    .recipient-details h2 {
+        font-size: 1.7em;
+    }
+
+    label {
+        font-size: 1.5em;
+    }
+
+    #senderName,
+    #recipientName,
+    #senderBank,
+    #recipientBank,
+    #senderAccount,
+    #recipientAccount,
+    #securityCode,
+    #amount {
+        font-size: 1.2em;
+        width: 20vw;
+    }
+
+    .recipient-details,
+    .sender-details {
+        width: 70vw;
+    }
+
+    .transfer-summary {
+        width: 450px;
+        height: 47.5vw;
+    }
+
+    h1 {
+        font-size: 2.4em;
+    }
+
+    .encryption-note {
+        font-size: 1.7em;
+    }
+
+    .send-money-btn {
+        position: absolute;
+        top: 158%;
+        font-size: 1.5em;
+    }
+
+    footer {
+        font-size: 2em;
+    }
+
+    .total-amount h3 {
+        font-size: 2em;
+    }
+
+    .total-amount .amount {
+        font-size: 4rem;
+    }
+
+    .fee h3,
+    .transfer-amount h3,
+    .estimated-arrival h3 {
+        font-size: 1.8em;
+    }
+
+    .fee p,
+    .transfer-amount p {
+        font-size: 2.5em;
+    }
+
+    .estimated-arrival p {
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width:1024px) {
+    .transfer-summary{
+        height: 60vw;
+    }
+    .send-money-btn{
+        margin-left: 60%;
+        width: 30%;
+    }
+    footer{
+        margin-top: 5%;
+        margin-left: 15%;
+    }
+}
+@media (max-width: 768px) {
+    .transfer-summary {
+        height: auto;
+        width: 90%;
+        margin: 0 auto;
+        padding: 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-radius: 30px;
+    }
+
+    .amount-details {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .total-amount,
+    .fee,
+    .transfer-amount,
+    .estimated-arrival {
+        margin: 0 1rem;
+        flex: 1;
+    }
+
+    .fee h3,
+    .transfer-amount h3,
+    .estimated-arrival h3 {
+        margin-top: 0;
+        font-size: 1.1em;
+    }
+
+    .fee p,
+    .transfer-amount p,
+    .estimated-arrival p {
+        font-size: 1.2em;
+    }
+    footer{
+        position: absolute;
+        top: 160%;
+        left: 20%;
+    }
+    .send-money-btn{
+        margin-left: 40%;
+        width: 30%;
+        position: absolute;
+        top: 133%;
+    }
+}
