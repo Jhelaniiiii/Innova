@@ -222,3 +222,196 @@ nav ul li a:hover {
     background-image: url(../Images/jerry.jpg);
     box-shadow: inset -10px 10px 20px 10px #00000081;
 }
+
+/* Large devices (desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    .writeUp {
+        margin: 40px;
+    }
+    .img img {
+        height: 400px;
+        width: 400px;
+        margin: 40px;
+    }
+}
+
+/* Medium devices (tablets, 992px and up) */
+@media (max-width: 992px) {
+    /* Navigation */
+    nav ul li {
+        margin-left: 7%;
+    }
+    nav ul li a {
+        font-size: 1.8vw;
+    }
+
+    /* Text and Image Sections */
+    .textbox-1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .writeUp {
+        max-width: 100%;
+        margin: 30px;
+    }
+    .img img {
+        margin: 0 30px 30px 30px;
+    }
+
+    /* Contact Section */
+    .textbox-2 {
+        grid-column-start: 1;
+        grid-column-end: 26;
+    }
+    .picbox-2 {
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 26;
+    }
+}
+
+/* Small devices (landscape phones, 768px and up) */
+@media (max-width: 768px) {
+    /* Navigation */
+    nav {
+        top: 3%;
+        left: 3%;
+    }
+    nav ul li a {
+        font-size: 2.2vw;
+    }
+    .jetblue-img {
+        width: 10%;
+    }
+    .user {
+        width: 5vw;
+    }
+
+    /* Hero Section */
+    .colorbox-1 {
+        font-size: 72px;
+    }
+    .picbox-1 {
+        height: 700px;
+    }
+
+    /* Text Content */
+    .writeUp h1 {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+    .writeUp p {
+        font-size: 18px;
+    }
+    .textbox-2 h1 {
+        font-size: 36px;
+        margin: 30px;
+    }
+    .contactUs {
+        font-size: 24px;
+    }
+    .contactUs img {
+        margin-right: 30px;
+        width: 80px;
+    }
+}
+
+/* Extra small devices (portrait phones, 576px and up) */
+@media (max-width: 576px) {
+    /* Navigation */
+    nav {
+        width: 100%;
+        left: 0;
+        padding: 0 20px;
+    }
+    nav ul {
+        justify-content: space-between;
+    }
+    nav ul li {
+        margin-left: 0;
+    }
+    nav ul li a {
+        font-size: 3.5vw;
+        padding: 5px;
+    }
+    .jetblue-img {
+        width: 15%;
+    }
+    .user {
+        width: 8vw;
+        right: 5%;
+    }
+
+    /* Hero Section */
+    .colorbox-1 {
+        font-size: 48px;
+    }
+    .picbox-1 {
+        height: 500px;
+        background-attachment: scroll;
+    }
+
+    /* Text Content */
+    .writeUp {
+        margin: 20px;
+    }
+    .writeUp h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .writeUp p {
+        font-size: 16px;
+    }
+    .img img {
+        height: 300px;
+        width: 300px;
+        margin: 20px;
+    }
+
+    /* Contact Section */
+    .textbox-2 h1 {
+        font-size: 28px;
+        margin: 20px;
+    }
+    .contactUs {
+        font-size: 18px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .contactUs img {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 60px;
+    }
+}
+
+/* Very small devices (phones, 400px and below) */
+@media (max-width: 400px) {
+    /* Navigation */
+    nav ul li a {
+        font-size: 4vw;
+    }
+
+    /* Hero Section */
+    .colorbox-1 {
+        font-size: 36px;
+    }
+    .picbox-1 {
+        height: 400px;
+    }
+
+    /* Text Content */
+    .img img {
+        height: 250px;
+        width: 250px;
+    }
+
+    /* Contact Section */
+    .contactUs {
+        font-size: 16px;
+    }
+    .contactUs img {
+        width: 50px;
+    }
+}
