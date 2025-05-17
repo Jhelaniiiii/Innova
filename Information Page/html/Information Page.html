@@ -20,16 +20,25 @@
 
             <img src="../Images\Icons\newjetbluelogo.png" alt="JetBlue" class="jetblue-img">
             <nav>
-                <ul class="nav">
-                <li class="nav-item "><a href="home.html">Home</a></li>
-                <li class="nav-item"><a href="services.html">Services</a></li>
-                <li class="nav-item active"><a href="">Appointment</a></li>
-                <li class="nav-item"><a href="testimonials.html">Testimonials</a></li>
-                </ul>
-            </nav>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
 
-            <script>
-                    document.querySelectorAll(".nav-item").forEach(item => {
+            
+                <div class="nav-overlay">
+                    <ul class="nav">
+                        <li class="nav-item"><a href="home.html">Home</a></li>
+                        <li class="nav-item "><a href="services.html">Services</a></li>
+                        <li class="nav-item"><a href="on-site-appointment.html">Appointment</a></li>
+                        <li class="nav-item active"><a href="testimonials.html">Testimonials</a></li>
+                    </ul>
+                </div>
+            </nav>
+                
+                <script>
+                document.querySelectorAll(".nav-item").forEach(item => {
                     item.addEventListener("mouseenter", () => {
                         item.classList.add("hovered");
                     });
@@ -37,20 +46,28 @@
                     item.addEventListener("mouseleave", () => {
                         item.classList.remove("hovered");
                     });
-                    
+
                     item.addEventListener("click", () => {
                         // Remove active class from all items
                         document.querySelectorAll(".nav-item").forEach(nav => 
                             nav.classList.remove("active")
                         );
-                        // Add active class to the clicked item
+                    
                         item.classList.add("active");
                     });
                 });
+                </script>
+                <script>
+                    const hamburger = document.querySelector('.hamburger');
+                    const navOverlay = document.querySelector('.nav-overlay');
+                
+                    hamburger.addEventListener('click', () => {
+                        hamburger.classList.toggle('active');
+                        navOverlay.classList.toggle('show');
+                    });
+                </script>
 
-            </script>
-
-            <a href="customer-profile.html"><img src="../Images\Icons\newuser.png" alt="user" class="user"></a>
+                <a href="customer-profile.jsp"><img src="../Images\Icons\newuser.png" alt="user" class="user"></a>
             
 
                 <!--Textbox-->
@@ -58,17 +75,24 @@
                     <div class="writeUp">
                         <h1>Where We Started</h1>
                         <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae saepe neque aspernatur distinctio animi sint, odio asperiores quasi, 
-                        error perspiciatis vitae! Tempora amet veritatis eveniet ipsum repudiandae reprehenderit sunt libero molestias sapiente rem? Asperi
-                        ores et maxime quo ullam doloremque laudantium quae natus ipsa, temporibus accusamus tempora, ratione quibusdam officia reprehender
-                        it repudiandae velit sed? Vel alias laudantium est deserunt ipsam, illo omnis optio aperiam totam delectus dolore eum esse voluptate
-                        nulla consequuntur, minus magnam neque pariatur obcaecati! Dolorum similique saepe in voluptatibus porro laudantium ipsam, voluptat
-                        es iure modi consequatur? Iure ipsam rem nisi molestiae aliquam nobis nihil aperiam odio obcaecati unde magni in eligendi harum quo,
-                            assumenda laudantium illum impedit repudiandae hic? Magnam eum, repellat similique facere illum ullam consequatur ipsa. Excepturi 
-                            at blanditiis, nesciunt ullam doloremque ea dolores enim doloribus quaerat assumenda expedita laboriosam sit! Odio laborum neque op
-                            tio explicabo fugiat officiis facilis cupiditate delectus alias. Nesciunt libero, deserunt iste numquam exercitationem aspernatur 
-                            eos consectetur tempora rem eaque sapiente necessitatibus laudantium beatae nulla quidem! Doloremque officiis repellendus tempore v
-                            oluptatibus ipsam iure ducimus impedit quaerat vero deserunt enim pariatur blanditiis, perferendis non quis eveniet beatae veritati
+                        Jet Blue Transport & Moving Company, also known as Jet Blue Transport Service, is located at 16 Fatima Trace, 
+                        Paramin, Maraval 121007. Its founder, Mr. Collin St. Hillaire, registered the company as a sole trader on 7th 
+                        February 2006, to include the following services: Transport, Tours, Moving Services, Messenger Services and 
+                        Shuttle Service.  At that time, Mr. St. Hillaire had one vehicle, a Nissan Frontier, with which he was able 
+                        to provide transport services for small businesses such as: House N’ Wares, Maraval; Art and Antique, West 
+                        Mall; and Austin Chang, Trinicity Industrial Estate. 
+                        <br> <br>
+                        With the increased demand for house-moving services, he later purchased a 3-ton truck, which gave him the 
+                        opportunity to do moving jobs for some prestigious and professional clients, including lawyers, such as Justin 
+                        Phelps; doctors, such as Dr. Brathwaithe; and sporting personalities such as Sunil Narine and Ricardo Powell.   
+                        Over the years, he provided services for banking institutions such as First Citizens Bank Ltd., AIC Securities 
+                        Ltd, and JMMB Trinidad and Tobago Group of Companies, where he moved whole offices along with safes. 
+                        <br> <br>
+                        Safe removal was a specialized service which he offered by outsourcing work to other specialized lift contractors. 
+                        In addition, he provided services for Ministries including: the Ministry of Finance, the Ministry of National Security, 
+                        the Central Bank and the Office of the Prime Minister.  Finally, his client list includes shipping companies such as 
+                        Platinum Logistics and the general public, who require packing and moving services to and from the Port of Port of Spain 
+                        (PPOS), and PLIPDECO.   
                         </p>
                     </div>
                     <div class="img">
