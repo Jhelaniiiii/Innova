@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="officialwiretransfer.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="icon" type="image/png" href="Images\Icons\truck.png"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wire Transfer | JetBlue Transport</title>
+</head>
+<body>
+    <img src="Images\Icons\newjetbluelogo.png" alt="JetBlue" class="jetblue-img">
+    <h1 class="jetblueh1">JetBlue Transport</h1>
+    <h1>Instructions</h1>
+    <section>
+    <div class="visit">
+        <h2>1. Visit Your Bank</h2> 
+        <p>Go to any local bank branch or use your online banking service</p>
+    </div>
+
+    <div class="deposit">
+        <h2>2. Deposit the Payment</h2>
+        <p>Deposit the total amount into the following account:</p>
+        <p><span class="account-label">Account Number:</span> 123456789</p>
+        <p>(Make sure to keep your deposit receipt)</p>
+    </div>
+    
+    <div class="proof">
+        <h2>3. Upload Proof of Payment</h2>
+        <p>After making the deposit, return to this website and upload a clear photo or scanned copy of your payment receipt using the</p>
+    </div>
+    
+    <div class="confirmation">
+        <h2>4. Confirmation</h2>
+        <p>Once we verify your payment, we will send you a confirmation via</p>
+    </div>
+    <h2 class="important">Important: Be sure to include your full name and service when uploading your proof to avoid delays.</h2>
+</section>  
+    <footer>© Jet Blue Transport 2025</footer>
+    <hr>
+    <div class="card">
+        <button id="uploadButton">
+            <img src="Images/Icons/card.png" alt="Upload Icon">
+        </button>
+        <p>Upload Proof of Payment</p>
+        <input type="file" id="fileInput" accept="image/*" style="display: none;">
+
+        <button id="submitButton" class="submit-btn" style="margin-top: 10%;">
+            <span>Submit</span>
+        </button>
+    </div>
+     <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Create elements for sliding alert
+    const alertModal = document.createElement('div');
+    const closeButton = document.createElement('span');
+    const messageContent = document.createElement('div');
+    let overlay = null;
+
+    // Modal setup with slide animation
+    alertModal.style.position = 'fixed';
+    alertModal.style.top = '50%';
+    alertModal.style.left = '50%';
+    alertModal.style.transform = 'translate(-50%, -150%)'; // Start above visible area
+    alertModal.style.backgroundColor = 'white';
+    alertModal.style.padding = '30px';
+    alertModal.style.borderRadius = '12px';
+    alertModal.style.boxShadow = '0 10px 25px rgba(0,0,0,0.2)';
+    alertModal.style.zIndex = '1000';
+    alertModal.style.width = '400px';
+    alertModal.style.maxWidth = '90%';
+    alertModal.style.minHeight = '100px';
+    alertModal.style.border = '1px solid #e0e0e0';
+    alertModal.style.opacity = '0';
+    alertModal.style.transition = 'all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
+    document.body.appendChild(alertModal);
+
+    // Close button setup
+    closeButton.innerHTML = '&times;';
+    closeButton.style.position = 'absolute';
+    closeButton.style.top = '15px';
+    closeButton.style.right = '20px';
+    closeButton.style.fontSize = '28px';
+    closeButton.style.cursor = 'pointer';
+    closeButton.style.color = '#888';
+    closeButton.style.border = 'none';
+    closeButton.style.background = 'none';
+    closeButton.style.padding = '0';
+    closeButton.style.margin = '0';
+    closeButton.addEventListener('click', closeModal);
+    alertModal.appendChild(closeButton);
+
+    // Message content setup
+    messageContent.style.padding = '20px 0';
+    messageContent.style.fontSize = '18px';
+    messageContent.style.textAlign = 'center';
+    messageContent.style.color = '#333';
+    alertModal.appendChild(messageContent);
+
+    // Function to close modal and clean up
+    function closeModal() {
+        alertModal.style.transform = 'translate(-50%, -150%)';
+        alertModal.style.opacity = '0';
+        
+        if (overlay) {
+            overlay.style.opacity = '0';
+            setTimeout(() => {
+                document.body.removeChild(overlay);
+                overlay = null;
+            }, 300);
+        }
+    }
+
+    // Custom alert function with slide-in effect
+    function showCustomAlert(message) {
+        messageContent.textContent = message;
+        
+        // Create overlay
+        overlay = document.createElement('div');
+        overlay.style.position = 'fixed';
+        overlay.style.top = '0';
+        overlay.style.left = '0';
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
+        overlay.style.backdropFilter = 'blur(4px)';
+        overlay.style.zIndex = '999';
+        overlay.style.opacity = '0';
+        overlay.style.transition = 'opacity 0.3s ease';
+        overlay.addEventListener('click', closeModal);
+        document.body.appendChild(overlay);
+
+        // Trigger animations
+        setTimeout(() => {
+            overlay.style.opacity = '1';
+            alertModal.style.opacity = '1';
+            alertModal.style.transform = 'translate(-50%, -50%)';
+        }, 10);
+    }
+
+    // Rest of your existing code
+    const uploadButton = document.getElementById('uploadButton');
+    const fileInput = document.getElementById('fileInput');
+    const cardDiv = document.querySelector('.card');
+    const uploadIcon = uploadButton.querySelector('img');
+    const uploadText = cardDiv.querySelector('p');
+
+    uploadButton.addEventListener('click', function() {
+        fileInput.click();
+    });
+
+    fileInput.addEventListener('change', function() {
+        const file = this.files[0];
+        
+        if (!file) return;
+        
+        if (!file.type.startsWith('image/')) {
+            showCustomAlert('Please upload a valid image file (JPEG, PNG, etc.)');
+            fileInput.value = '';
+            return;
+        }
+
+        const reader = new FileReader();
+        
+        reader.onload = function(e) {
+            uploadIcon.src = e.target.result;
+            uploadIcon.alt = "Payment Proof";
+            uploadIcon.style.width = '27vw';
+            uploadIcon.style.height = 'auto';
+            uploadIcon.style.marginBottom = '10px';
+            uploadText.textContent =  'Uploaded!';
+            uploadText.style.color = '#3875b2';
+        };
+        
+        reader.onerror = function() {
+            showCustomAlert('Error reading file. Please try again.');
+        };
+        
+        reader.readAsDataURL(file);
+    });
+});
+     </script>
+</body>
+</html>
